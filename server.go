@@ -254,7 +254,7 @@ func (s *Server) handleEvent(subscribers map[*subscription]bool, ev *pq.Notifica
 	return nil
 }
 
-// HandleEvents processes events from the database and copies them to relavent clients.
+// HandleEvents processes events from the database and copies them to relevant clients.
 func (s *Server) HandleEvents(ctx context.Context) error {
 	subscribers := map[*subscription]bool{}
 	events := s.l.NotificationChannel()
